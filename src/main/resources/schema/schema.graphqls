@@ -1,0 +1,14 @@
+type Payment {
+    id: ID!
+    employeeId: ID!
+    amount: Float!
+    status: String!
+}
+
+type Query {
+    getPaymentsByEmployeeId(employeeId: ID!): [Payment]
+}
+
+type Mutation {
+    processPayment(employeeId: ID!, amount: Float!): Payment
+}
